@@ -2,21 +2,21 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(x) {
+  showSlides(slideIndex += x);
 }
 
 // image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(x) {
+  showSlides(slideIndex = x);
 }
 
-function showSlides(n) {
+function showSlides(x) {
   let i;
   let slides = document.getElementsByClassName("slide-show");
   let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (x > slides.length) {slideIndex = 1}
+  if (x < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
